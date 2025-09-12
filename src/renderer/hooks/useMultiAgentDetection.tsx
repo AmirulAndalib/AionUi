@@ -3,13 +3,13 @@
  */
 
 import { ipcBridge } from '@/common';
-import { Message } from '@arco-design/web-react';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import Alert from '../components/Alert';
 
 export const useMultiAgentDetection = () => {
   const { t } = useTranslation();
-  const [message, contextHolder] = Message.useMessage();
+  const [showAlert, setShowAlert] = useState(false);
 
   useEffect(() => {
     const checkMultiAgentMode = async () => {
@@ -19,16 +19,11 @@ export const useMultiAgentDetection = () => {
           // 检测是否有多个ACP智能体（不包括内置的Gemini）
           const acpAgents = response.data.filter((agent: { backend: string; name: string; cliPath?: string }) => agent.backend !== 'gemini');
           if (acpAgents.length > 1) {
-            message.success({
-              content: (
-                <div style={{ lineHeight: '1.5' }}>
-                  <div style={{ fontWeight: 'bold', marginTop: '4px' }}>{t('conversation.welcome.multiAgentModeEnabled')}</div>
-                </div>
-              ),
-              duration: 3000,
-              showIcon: false,
-              className: 'multi-agent-message',
-            });
+            setShowAlert(true);
+            // 3秒后自动隐藏
+            setTimeout(() => {
+              setShowAlert(false);
+            }, 3000);
           }
         }
       } catch (error) {
@@ -40,5 +35,32 @@ export const useMultiAgentDetection = () => {
     checkMultiAgentMode();
   }, []); // 空依赖数组确保只在组件初始化时执行一次
 
-  return { contextHolder };
+  const alertComponent = showAlert ? (
+    <Alert
+      variant='success'
+      theme='default'
+      radius='medium'
+      shadow={true}
+      animated={true}
+      content={
+        <div style={{ lineHeight: '1.5' }}>
+          <div>{t('conversation.welcome.multiAgentModeEnabled')}</div>
+        </div>
+      }
+      showIcon={true}
+      closable={false}
+      className='multi-agent-message'
+      style={{
+        position: 'absolute',
+        top: '40px',
+        left: '50%',
+        transform: 'translateX(-50%)',
+        zIndex: 1000,
+        maxWidth: '340px',
+        width: 'fit-content',
+      }}
+    />
+  ) : null;
+
+  return { alertComponent };
 };

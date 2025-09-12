@@ -1,0 +1,191 @@
+/* Aion UI - 基于Arco Design的自定义Alert组件样式 */
+
+/* CSS Token 系统 - 渐变背景 */
+:root {
+  /* 亮色模式渐变 */
+  --gradient-success: linear-gradient(to right, #e8ffea 0%, #f5ffe8 100%);
+
+  /* 其他渐变 token 预留 */
+  --gradient-info: linear-gradient(to right, #e6f7ff 0%, #f0f9ff 100%);
+  --gradient-warning: linear-gradient(to right, #fff7e6 0%, #fffbf0 100%);
+  --gradient-error: linear-gradient(to right, #ffe6e6 0%, #fff0f0 100%);
+
+  /* Shadow Token 系统 - 基于Arco Design，透明度优化 */
+  --shadow-subtle: 0 2px 5px rgba(0, 0, 0, 0.07); /* 轻投影 - 7%透明度 */
+  --shadow-medium: 0 4px 10px rgba(0, 0, 0, 0.1); /* 中等投影 - Arco原值 */
+  --shadow-focus: 0 0 0 2px var(--color-primary-light-3); /* 聚焦投影 - Arco原值 */
+}
+
+/* 暗色模式渐变 (整个渐变20%透明度) */
+[data-theme='dark'] {
+  --gradient-success: linear-gradient(to right, #e8ffea 0%, #f5ffe8 100%);
+  --gradient-info: linear-gradient(to right, #e6f7ff 0%, #f0f9ff 100%);
+  --gradient-warning: linear-gradient(to right, #fff7e6 0%, #fffbf0 100%);
+  --gradient-error: linear-gradient(to right, #ffe6e6 0%, #fff0f0 100%);
+}
+
+/* 基础样式 */
+.aion-alert {
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+
+/* 动画效果 */
+.aion-alert--animated {
+  animation: aion-alert-enter 0.3s ease-out;
+}
+
+@keyframes aion-alert-enter {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 圆角大小 */
+.aion-alert--radius-none {
+  border-radius: 0 !important;
+}
+
+.aion-alert--radius-small {
+  border-radius: 4px !important;
+}
+
+.aion-alert--radius-medium {
+  border-radius: 8px !important;
+}
+
+.aion-alert--radius-large {
+  border-radius: 12px !important;
+}
+
+/* 阴影效果 */
+.aion-alert--shadow {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.aion-alert--shadow:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  transform: translateY(-1px);
+}
+
+/* 主题样式 */
+
+/* 默认主题 */
+.aion-alert--default {
+  /* 继承Arco原始样式 */
+  border: 1px solid var(--color-border-2, rgba(229, 230, 235, 1)) !important;
+}
+
+.aion-alert--default.aion-alert--success {
+  border: 1px solid var(--color-border-2, rgba(229, 230, 235, 1)) !important;
+  background: var(--gradient-success) !important;
+}
+
+/* 暗色模式下整个背景渐变透明度20% */
+[data-theme='dark'] .aion-alert--default.aion-alert--success {
+  opacity: 0.2;
+}
+
+.aion-alert--default.aion-alert--info {
+  border: 1px solid var(--color-border-2, rgba(229, 230, 235, 1)) !important;
+}
+
+.aion-alert--default.aion-alert--warning {
+  border: 1px solid var(--color-border-2, rgba(229, 230, 235, 1)) !important;
+}
+
+.aion-alert--default.aion-alert--error {
+  border: 1px solid var(--color-border-2, rgba(229, 230, 235, 1)) !important;
+}
+
+/* 现代主题 */
+.aion-alert--modern {
+  border: none !important;
+  backdrop-filter: blur(8px);
+  font-weight: 500;
+}
+
+.aion-alert--modern.aion-alert--success {
+  background: linear-gradient(135deg, rgba(22, 163, 74, 0.1), rgba(34, 197, 94, 0.05)) !important;
+  border-left: 4px solid #16a34a !important;
+}
+
+.aion-alert--modern.aion-alert--info {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(147, 197, 253, 0.05)) !important;
+  border-left: 4px solid #3b82f6 !important;
+}
+
+.aion-alert--modern.aion-alert--warning {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(252, 211, 77, 0.05)) !important;
+  border-left: 4px solid #f59e0b !important;
+}
+
+.aion-alert--modern.aion-alert--error {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(252, 165, 165, 0.05)) !important;
+  border-left: 4px solid #ef4444 !important;
+}
+
+/* 简约主题 */
+.aion-alert--minimal {
+  background: rgba(255, 255, 255, 0.8) !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  backdrop-filter: blur(12px);
+}
+
+.aion-alert--minimal.aion-alert--success {
+  color: #16a34a !important;
+}
+
+.aion-alert--minimal.aion-alert--info {
+  color: #3b82f6 !important;
+}
+
+.aion-alert--minimal.aion-alert--warning {
+  color: #f59e0b !important;
+}
+
+.aion-alert--minimal.aion-alert--error {
+  color: #ef4444 !important;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .aion-alert {
+    margin: 0 8px;
+  }
+
+  .aion-alert--shadow {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+}
+
+/* 深色模式支持 */
+[data-theme='dark'] .aion-alert--minimal {
+  background: rgba(0, 0, 0, 0.6) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: #fff !important;
+}
+
+[data-theme='dark'] .aion-alert--shadow {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* 悬停效果 */
+.aion-alert:hover {
+  transform: translateY(-1px);
+}
+
+/* 自定义图标样式 */
+.aion-alert .arco-alert-icon {
+  margin-right: 8px;
+}
+
+/* 内容样式 */
+.aion-alert .arco-alert-content {
+  line-height: 1.5;
+}

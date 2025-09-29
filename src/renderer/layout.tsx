@@ -47,7 +47,14 @@ const Layout: React.FC<{
   const { onClick } = useDebug();
   const { contextHolder: multiAgentContextHolder } = useMultiAgentDetection();
   return (
-    <ArcoLayout className={'size-full layout'}>
+    <ArcoLayout
+      className={'size-full layout'}
+      style={
+        {
+          '--layout-sider-width': collapsed ? '64px' : '250px',
+        } as React.CSSProperties
+      }
+    >
       <ArcoLayout.Sider
         collapsedWidth={64}
         collapsed={collapsed}

@@ -68,6 +68,14 @@ _Multiple conversations, no task confusion, independent memory, double efficienc
   <img src="./resources/multichat-side-by-side.gif" alt="Conversation Management Demo" width="800">
 </p>
 
+### 🔌 **MCP Tool Integration**
+
+_Seamlessly integrate and manage Model Context Protocol servers and tools_
+
+<p align="center">
+  <img src="./resources/sort_out_folder.gif" alt="MCP Tool Management Demo" width="800">
+</p>
+
 ---
 
 **This is just the tip of AionUi's capabilities!** 🚀
@@ -133,6 +141,15 @@ AionUi provides a modern interface for users who need better workflow efficiency
 - **Real-time Monitoring** - Live connection status and backend health monitoring
 - **Unified Interface** - All terminal AI agents accessible through the same chat interface
 
+### 🔌 **MCP Tool Management**
+
+- **MCP Server Configuration** - Add, edit, and manage Model Context Protocol servers
+- **Multiple Import Methods** - Import from JSON configuration or CLI with one-click setup
+- **Tool Discovery** - Automatically discover and list available tools from MCP servers
+- **Connection Testing** - Real-time testing of MCP server connections and health status
+- **Multi-Agent Sync** - Synchronize MCP configurations across different AI agents
+- **Tool Management** - Enable/disable tools, view parameters and tool descriptions
+
 ### 🔄 **Multi-API Key Rotation Service**
 
 - **Multi-Key Rotation** - Automatic rotation of multiple API keys for enhanced reliability
@@ -183,6 +200,7 @@ Ready to try AionUi? Download the latest version for your platform from our rele
 - [📖 Complete Installation Guide](https://github.com/iOfficeAI/AionUi/wiki/Getting-Started) - Detailed steps from download to configuration
 - [⚙️ LLM Configuration Guide](https://github.com/iOfficeAI/AionUi/wiki/LLM-Configuration) - Multi-platform AI model configuration
 - [🤖 Multi-Agent Mode Setup](https://github.com/iOfficeAI/AionUi/wiki/ACP-Setup) - Integrate terminal AI agents
+- [🔌 MCP Tool Configuration](https://github.com/iOfficeAI/AionUi/wiki/MCP-Setup) - Model Context Protocol server setup
 - [🎨 Image Generation Configuration](https://github.com/iOfficeAI/AionUi/wiki/AionUi-Image-Generation-Tool-Model-Configuration-Guide) - AI image generation setup tutorial
 
 ### 🎯 Use Cases

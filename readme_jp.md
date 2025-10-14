@@ -22,6 +22,14 @@
 
 ## 🎯 **AionUi ユースケース**
 
+### 🤖 **マルチエージェントモード**
+
+_複数のターミナル AI エージェントをシームレスに統合 - Gemini CLI、Claude Code、Qwen Code など_
+
+<p align="center">
+  <img src="./resources/multi-agent.gif" alt="マルチエージェントモードデモ" width="800">
+</p>
+
 ### 🎨 **AI 画像生成・編集**
 
 _Gemini 2.5 Flash Image Preview によるインテリジェントな画像生成、編集、認識_
@@ -52,6 +60,14 @@ _複数の会話を開いてもタスクは混乱せず、それぞれの記憶�
 
 <p align="center">
   <img src="./resources/multichat-side-by-side.gif" alt="会話管理デモ" width="800">
+</p>
+
+### 🔌 **MCP ツール統合**
+
+_モデルコンテキストプロトコルサーバーとツールをシームレスに統合・管理_
+
+<p align="center">
+  <img src="./resources/sort_out_folder.gif" alt="MCP ツール管理デモ" width="800">
 </p>
 
 ## 📋 目次
@@ -101,6 +117,31 @@ AionUi は、作業効率を向上させるモダンなインターフェース�
 - **RichText をレンダリング** - コードブロックや整形済みコンテンツを、見やすく美しくレンダリング
 - **AI によるツール選択** - タスクに応じて最適なツールを自動で選び、実行します。
 
+### 🤖 **マルチエージェント統合**
+
+- **マルチターミナルエージェントサポート** - 様々なターミナル AI エージェント（Gemini CLI、Claude Code、Qwen Code など）をシームレスに統合
+- **動的 CLI 検出** - バックエンドの自動発見と CLI パス検出
+- **セキュア認証** - OAuth サポートとセキュアな認証フロー
+- **リアルタイム監視** - ライブ接続状態とバックエンドヘルス監視
+- **統一インターフェース** - すべてのターミナル AI エージェントに同じチャットインターフェースでアクセス
+
+### 🔌 **MCP ツール管理**
+
+- **MCP サーバー設定** - モデルコンテキストプロトコルサーバーの追加、編集、管理
+- **複数のインポート方法** - JSON 設定からのインポートまたは CLI でのワンクリック設定
+- **ツール発見** - MCP サーバーから利用可能なツールを自動発見・リスト表示
+- **接続テスト** - MCP サーバー接続とヘルス状態のリアルタイムテスト
+- **マルチエージェント同期** - 異なる AI エージェント間で MCP 設定を同期
+- **ツール管理** - ツールの有効/無効化、パラメータとツール説明の表示
+
+### 🔄 **マルチ API Key ローテーションサービス**
+
+- **マルチ Key ローテーション** - 信頼性向上のための複数 API Key の自動ローテーション
+- **インテリジェントエラー回復** - 時間ベースのブラックリスト（90秒）と自動リトライメカニズム
+- **高可用性** - サービス中断を防ぐ API Key 間のシームレスなフェイルオーバー
+- **レート制限処理** - API レート制限とクォータを尊重するスマートリトライロジック
+- **パフォーマンス最適化** - ダウンタイムの削減と API 呼び出し成功率の向上
+
 ### 🎨 **AI 画像生成・編集**
 
 - **インテリジェント画像生成** - Gemini 2.5 Flash Image Preview で駆動、最先端の画像モデル
@@ -143,6 +184,7 @@ AionUi をお試しですか？お使いの環境に合った最新版を、リ�
 - [📖 完全インストールガイド](https://github.com/iOfficeAI/AionUi/wiki/Getting-Started-Chinese) - ダウンロードから設定までの詳細ステップ
 - [⚙️ LLM 設定ガイド](https://github.com/iOfficeAI/AionUi/wiki/LLM-Configuration-Chinese) - マルチプラットフォーム AI モデル設定
 - [🤖 マルチエージェントモード設定](https://github.com/iOfficeAI/AionUi/wiki/ACP-Setup-Chinese) - ターミナル AI エージェント統合
+- [🔌 MCP ツール設定](https://github.com/iOfficeAI/AionUi/wiki/MCP-Setup-Chinese) - モデルコンテキストプロトコルサーバー設定
 - [🎨 画像生成設定](https://github.com/iOfficeAI/AionUi/wiki/AionUi-Image-Generation-Tool-Model-Configuration-Guide-Chinese) - AI 画像生成設定チュートリアル
 
 ### 🎯 ユースケース

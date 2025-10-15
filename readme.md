@@ -28,7 +28,7 @@
 
 ### 🤖 **Multi-Agent Mode**
 
-_Seamlessly integrate multiple terminal AI agents - Gemini CLI, Claude Code, Qwen Code and more_
+_Seamlessly integrate multiple terminal AI agents - Gemini CLI, Claude Code, Qwen Code, Codex and more_
 
 <p align="center">
   <img src="./resources/multi-agent.gif" alt="Multi-Agent Mode Demo" width="800">
@@ -127,7 +127,7 @@ AionUi provides a modern interface for users who need better workflow efficiency
 
 ### 🤖 **Multi-Agent Integration**
 
-- **Multi-Terminal Agent Support** - Seamlessly integrate with various terminal AI agents (Gemini CLI, Claude Code, Qwen Code, etc.)
+- **Multi-Terminal Agent Support** - Seamlessly integrate with various terminal AI agents (Gemini CLI, Claude Code, Qwen Code, Codex, etc.)
 - **Dynamic CLI Detection** - Automatic backend discovery and CLI path detection
 - **Secure Authentication** - OAuth support and secure authentication flows
 - **Real-time Monitoring** - Live connection status and backend health monitoring

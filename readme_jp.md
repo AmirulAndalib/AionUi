@@ -24,7 +24,7 @@
 
 ### 🤖 **マルチエージェントモード**
 
-_複数のターミナル AI エージェントをシームレスに統合 - Gemini CLI、Claude Code、Qwen Code など_
+_複数のターミナル AI エージェントをシームレスに統合 - Gemini CLI、Claude Code、Qwen Code、Codex など_
 
 <p align="center">
   <img src="./resources/multi-agent.gif" alt="マルチエージェントモードデモ" width="800">
@@ -111,7 +111,7 @@ AionUi は、作業効率を向上させるモダンなインターフェース�
 
 ### 🤖 **マルチエージェント統合**
 
-- **マルチターミナルエージェントサポート** - 様々なターミナル AI エージェント（Gemini CLI、Claude Code、Qwen Code など）をシームレスに統合
+- **マルチターミナルエージェントサポート** - 様々なターミナル AI エージェント（Gemini CLI、Claude Code、Qwen Code、Codex など）をシームレスに統合
 - **動的 CLI 検出** - バックエンドの自動発見と CLI パス検出
 - **セキュア認証** - OAuth サポートとセキュアな認証フロー
 - **リアルタイム監視** - ライブ接続状態とバックエンドヘルス監視

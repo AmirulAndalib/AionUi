@@ -24,7 +24,7 @@
 
 ### 🤖 **多代理模式**
 
-_无缝集成多个终端 AI 代理 - Gemini CLI、Claude Code、Qwen Code 等_
+_无缝集成多个终端 AI 代理 - Gemini CLI、Claude Code、Qwen Code、Codex 等_
 
 <p align="center">
   <img src="./resources/multi-agent.gif" alt="多代理模式演示" width="800">
@@ -111,7 +111,7 @@ AionUi 为需要更好工作流效率的用户提供了现代界面，同时**�
 
 ### 🤖 **多 Agent 集成**
 
-- **多终端代理支持** - 无缝集成多种终端 AI 代理（Gemini CLI、Claude Code、Qwen Code 等）
+- **多终端代理支持** - 无缝集成多种终端 AI 代理（Gemini CLI、Claude Code、Qwen Code、Codex 等）
 - **动态 CLI 检测** - 自动后端发现和 CLI 路径检测
 - **安全认证** - OAuth 支持和安全认证流程
 - **实时监控** - 实时连接状态和后端健康监控
